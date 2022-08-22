@@ -1,0 +1,36 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Category>
+@{
+    ViewBag.Title = "AdminCategoryList";
+    Layout = "~/Views/Shared/_Admin_Layout_.cshtml";
+}
+<br />
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th style="width:1%;">#</th>
+            <th>Ad</th>
+            <th style="width:4%;">Renk</th>
+            <th>Açıklama</th>
+            <th style="text-align:center; width:20%;" colspan="3">Araçlar</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CategoryID</td>
+                <td>@item.CategoryName</td>
+                <td><span class="badge" style="color:white;background-color:@item.CategoryColor">Kategori</span></td>
+                <td>@item.CategoryDescription</td>
+                <td><a href="/Category/DeleteCategory/@item.CategoryID" class="btn btn-danger ">Sil</a></td>
+                <td><a href="/Category/EditCategory/@item.CategoryID" class="btn btn-info ">Guncelle</a></td>
+                <td><a href="#" class="btn btn-primary ">Bloglar</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+<a href="/AdminCategory/AddCategory" class="btn btn-success">Kategori ekle</a>
+
+

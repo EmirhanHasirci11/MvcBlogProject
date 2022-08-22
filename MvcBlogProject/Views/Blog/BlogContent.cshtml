@@ -1,0 +1,11 @@
+﻿@model EntityLayer.Concrete.Blog
+<div class="post-content-body">
+    <p>@Html.DisplayFor(x => x.BlogContent)</p>
+    @ViewBag.getid
+
+    <div class="row mb-5 mt-5">
+        <div class="col-md-12 mb-4">
+            <img src="@Html.DisplayFor(x=>x.BlogImage)" alt="Image placeholder" class="img-fluid rounded">
+        </div>
+    </div>
+</div>

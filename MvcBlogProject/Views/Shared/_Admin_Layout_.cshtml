@@ -1,0 +1,231 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AdminLTE 3 | Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/Templates/AdminLTE-3.0.4/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="~/Templates/AdminLTE-3.0.4/dist/css/adminlte.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <a href="../../index3.html" class="brand-link">
+                <img src="~/Templates/AdminLTE-3.0.4/dist/img/AdminLTELogo.png"
+                     alt="AdminLTE Logo"
+                     class="brand-image img-circle elevation-3"
+                     style="opacity: .8">
+                <span class="brand-text font-weight-light">MVC Blog Projesi</span>
+
+            </a>
+            <div class="sidebar">
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                        <img src="~/Templates/AdminLTE-3.0.4/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                    </div>
+                    <div class="info">
+                        <a href="#" class="d-block">Blog Admin Paneli</a>
+                    </div>
+                </div>
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>
+                                    Bloglar
+                                </p>
+                            <i class="right fas fa-angle-left"></i>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/Blog/AdminBlogList" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Blog Eski Sayfa</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/Blog/AdminBlogListNew" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Blog Hızlı Bakış</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../widgets.html" class="nav-link">
+                                <i class="nav-icon fas fa-people-arrows"></i>
+                                <p>
+                                    Yazarlar
+                                </p>
+                                <i class="right fas fa-angle-left"></i>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/Author/AuthorList" class="nav-link">
+                                        <i class="far fa-address-book nav-icon"></i>
+                                        <p>Yazar Listesi</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/Author/AddAuthor" class="nav-link">
+                                        <i class="far fa-user nav-icon"></i>
+                                        <p>Yazar Ekle</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../widgets.html" class="nav-link">
+                                <i class="nav-icon fas fa-comment"></i>
+                                <p>
+                                    Yorumlar
+                                </p>
+                                <i class="right fas fa-angle-left" ></i>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/Comment/AdminCommentListTrue" class="nav-link">
+                                        <i class="far fa-check-circle nav-icon"></i>
+                                        <p>Aktif Yorumlar</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/Comment/AdminCommentListFalse" class="nav-link">
+                                        <i class="far fa-window-close nav-icon"></i>
+                                        <p>Onaylanmamış Yorumlar</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Category/AdminCategoryList" class="nav-link">
+                                <i class="nav-icon fas fa-box"></i>
+                                <p>
+                                    Kategoriler
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../widgets.html" class="nav-link">
+                                <i class="nav-icon fas fa-user"></i>
+                                <p>
+                                    Hakkımda
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../widgets.html" class="nav-link">
+                                <i class="nav-icon fas fa-mail-bulk"></i>
+                                <p>
+                                    Mesajlar
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-chart-pie"></i>
+                                <p>
+                                    Graifkler
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="../charts/chartjs.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>ChartJS</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="../charts/flot.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Flot</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="../charts/inline.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Inline</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../widgets.html" class="nav-link">
+                                <i class="nav-icon fas fa-address-book"></i>
+                                <p>
+                                    Yetkilendirme
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../widgets.html" class="nav-link">
+                                <i class="nav-icon fas fa-window-close"></i>
+                                <p>
+                                    Çıkış Yap
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                
+
+            </div>
+
+            
+
+        </aside>
+
+        
+
+        <div class="content-wrapper">
+
+            <!-- Content Header (Page header) -->
+
+            <section class="content-header">
+
+                <div class="container-fluid">
+                            @RenderBody()
+                </div><!-- /.container-fluid -->
+            </section>
+            <!-- Main content -->
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->    
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+
+        <!-- /.control-sidebar -->
+
+    </div>
+
+    <!-- ./wrapper -->
+    <!-- jQuery -->
+
+    <script src="~/Templates/AdminLTE-3.0.4/plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap 4 -->
+
+    <script src="~/Templates/AdminLTE-3.0.4/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AdminLTE App -->
+
+    <script src="~/Templates/AdminLTE-3.0.4/dist/js/adminlte.min.js"></script>
+
+    <!-- AdminLTE for demo purposes -->
+
+    <script src="~/Templates/AdminLTE-3.0.4/dist/js/demo.js"></script>
+
+</body>
+
+</html>

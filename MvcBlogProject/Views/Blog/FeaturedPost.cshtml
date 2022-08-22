@@ -1,0 +1,64 @@
+﻿@{ 
+    var post1 = (EntityLayer.Concrete.Blog)ViewData["post1"];
+    var post2 = (EntityLayer.Concrete.Blog)ViewData["post2"];
+    var post3 = (EntityLayer.Concrete.Blog)ViewData["post3"];
+    var post4 = (EntityLayer.Concrete.Blog)ViewData["post4"];
+    var mainpost = (EntityLayer.Concrete.Blog)ViewData["mainpost"];
+}
+<div class="site-section bg-light">
+    <div class="container">
+        <h2>Son eklenenler</h2>
+        <div class="row align-items-stretch retro-layout-2">
+            <div class="col-md-4">
+                <a href="/Blog/BlogDetails/@post1.BlogID" class="h-entry mb-30 v-height gradient" style="background-image: url('@post1.BlogImage');">
+
+                    <div class="text">
+                        <h2>@post1.BlogTitle</h2>
+                        <span class="post-category" style="background-color:@post1.Category.CategoryColor">@post1.Category.CategoryName</span>
+                        <span class="date">@(((DateTime)post1.BlogDate).ToString("dd-MMM-yyyy"))</span>
+                    </div>
+                </a>
+                <a href="/Blog/BlogDetails/@post2.BlogID" class="h-entry v-height gradient" style="background-image: url('@post2.BlogImage');">
+
+                    <div class="text">
+                        <h2>@post2.BlogTitle</h2>
+                        <span class="post-category" style="background-color:@post2.Category.CategoryColor">@post2.Category.CategoryName</span>
+                        <span class="date">@(((DateTime)post2.BlogDate).ToString("dd-MMM-yyyy"))</span>
+
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="/Blog/BlogDetails/@mainpost.BlogID" class="h-entry img-5 h-100 gradient" style="background-image: url('@mainpost.BlogImage');">
+
+                    <div class="text">
+                        <div class="post-categories mb-3">
+
+                            <span class="post-category" style="background-color:@mainpost.Category.CategoryColor">@mainpost.Category.CategoryName</span>
+                        </div>
+                        <h2>@ViewBag.mainpostTitle</h2>
+                        <span class="date">@(((DateTime)mainpost.BlogDate).ToString("dd-MMM-yyyy"))</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="/Blog/BlogDetails/@post3.BlogID" class="h-entry mb-30 v-height gradient" style="background-image: url('@post3.BlogImage');">
+
+                    <div class="text">
+                        <h2>@post3.BlogTitle</h2>
+                        <span class="post-category" style="background-color:@post3.Category.CategoryColor">@post3.Category.CategoryName</span>
+                        <span class="date">@(((DateTime)post3.BlogDate).ToString("dd-MMM-yyyy"))</span>
+                    </div>
+                </a>
+                <a href="/Blog/BlogDetails/@post4.BlogID" class="h-entry v-height gradient" style="background-image: url('@post4.BlogImage');">
+
+                    <div class="text">
+                        <h2>@post4.BlogTitle</h2>
+                        <span class="post-category" style="background-color:@post4.Category.CategoryColor">@post4.Category.CategoryName</span>
+                        <span class="date">@(((DateTime)post4.BlogDate).ToString("dd-MMM-yyyy"))</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

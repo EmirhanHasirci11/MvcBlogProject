@@ -1,0 +1,64 @@
+﻿@model IEnumerable<EntityLayer.Concrete.About>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_BlogLayout.cshtml";
+}
+
+
+
+<div class="site-cover site-cover-sm same-height overlay single-page" style="background-image: url('/Images/about.jpg');">
+    <div class="container">
+        <div class="row same-height justify-content-center">
+            <div class="col-md-12 col-lg-10">
+                <div class="post-entry text-center">
+                    <h1 class="">Hakkımda</h1>
+                    <p class="lead mb-4 text-white">Projeyi geliştiren kişiyi daha yakından tanımak ister misiniz?</p>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>
+<div class="site-section bg-light">
+    <div class="container">
+        <div class="row">
+                @foreach(var item in Model)
+            {
+            <div class="col-md-6 order-md-2">
+                <img src="@item.AboutImage1" alt="Image" class="img-fluid">
+            </div>
+            <div class="col-md-5 mr-auto order-md-1">
+                <h2>Ben Kimim</h2>
+
+                <p>@item.AboutContent1</p>
+            </div>
+            }               
+        </div>
+    </div>
+</div>
+<div class="site-section bg-light">
+    <div class="container">
+        <div class="row">
+                @foreach(var item in Model)
+            {
+            <div class="col-md-6">
+                <img src="@item.AboutImage2" alt="Image" class="img-fluid">
+                
+            </div>
+            <div class="col-md-5 ml-auto">
+                
+
+                <h2>Uğraşlarım</h2>
+                <p class="mb-4">@item.AboutContent2</p>
+
+            <ul class="">
+                <li>Web Geliştirme</li>
+                <li>Web Tasarlama</li>
+                <li>Oyun Tasarımı</li>
+            </ul>
+            </div>
+            }
+        </div>
+    </div>
+</div>
+@Html.Action("AddMail", "MailSubscribe")
+@Html.Action("Footer", "About")

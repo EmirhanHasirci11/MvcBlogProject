@@ -1,0 +1,52 @@
+﻿@model EntityLayer.Concrete.Author
+@{
+    ViewBag.Title = "EditAuthor";
+    Layout = "~/Views/Shared/_Admin_Layout_.cshtml";
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Yazar ekleme sayfası</title>
+</head>
+<body>
+
+    @using (Html.BeginForm("EditAuthor", "Author", FormMethod.Post))
+    {
+        <div class="form-group">
+            @Html.HiddenFor(x=>x.AuthorID)
+            @Html.Label("Yazar Adı *")
+            @Html.TextBoxFor(x => x.AuthorName, new { @class = "form-control", @placeholder = "Adınız" })
+            <br />
+            @Html.Label("Yazar Soyadı *")
+            @Html.TextBoxFor(x => x.AuthorSurname, new { @class = "form-control", @placeholder = "Soyadınız" })
+            <br />
+            @Html.Label("Yazar Resim Yolu")
+            @Html.TextBoxFor(x => x.AuthorImage, new { @class = "form-control", @placeholder = "Lütfen bir resim sitesi kullanarak resminizi 128x128 boyutlarında paylaşıp linkinizi buraya ekleyiniz " })
+            <br />
+            @Html.Label("Yazar Panel Hakkında kısmı *")
+            @Html.TextAreaFor(x => x.AuthorAbout, 4, 40, new { @class = "form-control", @placeholder = "Hakkınızda bilinmesi istenilenleri giriniz" })
+            <br />
+            @Html.Label("Yazar Maili *")
+            @Html.TextBoxFor(x => x.AuthorMail, new { @class = "form-control", @placeholder = "Mailiniz" })
+            <br />
+            @Html.Label("Yazar Şifresi *")
+            @Html.TextBoxFor(x => x.AuthorPassword, new { @class = "form-control", @placeholder = "Şifreniz" })
+            <br />
+            @Html.Label("Yazar Unvanınız *")
+            @Html.TextBoxFor(x => x.AuthorTitle, new { @class = "form-control", @placeholder = "Unvanınızı giriniz" })
+            <br />
+            @Html.Label("Yazar kısa bilgi")
+            @Html.TextBoxFor(x => x.AuthorAboutShort, new { @class = "form-control", @placeholder = "Hakkınızda kısaca neler yaptığınızı '/' ile ayırarak giriniz" })
+            <br />
+
+            <h6>***Yıldız ile belirtilenler zorunludur.***</h6>
+            <br />
+            <button type="submit" class="btn btn-success">Güncelle</button>
+        </div>
+    }
+
+
+</body>
+</html>
+
+

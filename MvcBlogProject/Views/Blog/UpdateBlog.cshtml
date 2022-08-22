@@ -1,0 +1,40 @@
+﻿@model EntityLayer.Concrete.Blog
+@{
+    ViewBag.Title = "UpdateBlog";
+    Layout = "~/Views/Shared/_Admin_Layout_.cshtml";
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Blog Güncelleme Sayfası</title>
+</head>
+<body>
+    @using (Html.BeginForm("UpdateBlog", "Blog", FormMethod.Post))
+    {
+        <div class="form-group">
+            @*HiddenFor işlemleri encrypt edilerek tutualacak ve getirilecek*@
+            @Html.HiddenFor(x => x.BlogID)
+            @Html.HiddenFor(x => x.BlogDate)
+            @Html.HiddenFor(x => x.AuthorID)
+
+
+
+            @Html.Label("Blog Başlığı")
+            @Html.TextBoxFor(x => x.BlogTitle, new { @class = "form-control" })
+            <br />
+            @Html.Label("Kategori")
+            @Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.categoryValues, new { @class = "form-control" })
+            <br />
+            @Html.Label("Resim Yolu")
+            @Html.TextBoxFor(x => x.BlogImage, new { @class = "form-control" })
+            <br />
+            @Html.Label("Blog İçeriği")
+            @Html.TextAreaFor(x => x.BlogContent, 4, 30, new { @class = "form-control" })
+            <br />
+            <button class="btn btn-primary">Güncelle</button>
+
+        </div>
+    }
+</body>
+</html>
+
