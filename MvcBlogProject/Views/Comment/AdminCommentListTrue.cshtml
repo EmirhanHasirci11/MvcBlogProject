@@ -36,7 +36,7 @@
                                 @item.CommentText
                             </p>                                                           
                                 <span class="float-right">
-                                    <a href="/Comment/ChangeStatusToFalse/@item.CommentID" class="link-black text-sm">
+                                    <a id="DeleteBtn" onclick="return confirm('Yorumu kaldırmak istediğinize emin misiniz')" href="/Comment/ChangeStatusToFalse/@item.CommentID" class="link-black text-sm">
                                         <i class="far fa-window-close mr-1"></i>Yorumu Kaldır
                                     </a>
                                 </span>

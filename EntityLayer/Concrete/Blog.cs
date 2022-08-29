@@ -11,14 +11,14 @@ namespace EntityLayer.Concrete
     {
         [Key]
         public int BlogID { get; set; }
-        [Required]
-        [StringLength(100)]
+        
         public string BlogTitle { get; set; }    
-        [StringLength(250)]
+      
         public string BlogImage { get; set; }
         public DateTime BlogDate { get; set; }
-        [Required]
-        public string BlogContent { get; set; }
+        
+        public string BlogContent { get; set; }     
+        public bool BlogStatus{ get; set; }
         public int CategoryID { get; set; }
         public virtual Category Category { get; set; }
         public int AuthorID { get; set; }

@@ -1,5 +1,16 @@
-﻿
+﻿@model EntityLayer.Concrete.SubscribeMail
 
+<link rel="stylesheet" href="~/Templates/miniblog/fonts/icomoon/style.css">
+<link rel="stylesheet" href="~/Templates/miniblog/css/bootstrap.min.css">
+<link rel="stylesheet" href="~/Templates/miniblog/css/magnific-popup.css">
+<link rel="stylesheet" href="~/Templates/miniblog/css/jquery-ui.css">
+<link rel="stylesheet" href="~/Templates/miniblog/css/owl.carousel.min.css">
+<link rel="stylesheet" href="~/Templates/miniblog/css/owl.theme.default.min.css">
+<link rel="stylesheet" href="~/Templates/miniblog/css/bootstrap-datepicker.css">
+<link rel="stylesheet" href="~/Templates/miniblog/fonts/flaticon/font/flaticon.css">
+<link rel="stylesheet" href="~/Templates/miniblog/css/aos.css">
+
+<link rel="stylesheet" href="~/Templates/miniblog/css/style.css">
 <div class="site-section bg-lightx">
     <div class="container">
         <div class="row justify-content-center text-center">
@@ -7,10 +18,22 @@
                 <div class="subscribe-1 ">
                     <h2>Yeni bloglar için bültenimize abone olun</h2>
                     <p class="mb-5">Birbirinden farklı postlarımızdan haberdar olmak için e-mail adresinizi girerek takip edebilirsiniz. </p>
-                    <form method="post" class="d-flex">
-                        <input type="text" class="form-control" name="Mail" placeholder="Mail adresinizi girin">
-                        <input type="submit" class="btn btn-primary" value="Abone ol">
-                    </form>
+                    <p class="text-danger">
+
+                    </p>
+                    @using (Html.BeginForm("AddMail", "MailSubscribe", FormMethod.Post))
+                    {
+                        <span>
+
+                        @Html.TextBoxFor(x => x.Mail, new { @class = "form-control", @placeholder = "Lütfen mailinizi giriniz" })
+                        <br />
+                        <button type="submit" class="btn btn-primary">Abone ol</button>
+                        <span class="text-danger">
+                            @Html.ValidationMessageFor(x => x.Mail)
+
+                        </span>
+                        </span>
+                    }
                 </div>
             </div>
         </div>

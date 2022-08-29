@@ -1,0 +1,40 @@
+﻿@model IEnumerable<EntityLayer.Concrete.About>
+@{
+    ViewBag.Title = "AboutList";
+    Layout = "~/Views/Shared/_Admin_Layout_.cshtml";
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Hakkımda Düzenleme Sayfası</title>
+</head>
+<body>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Image1</th>
+                <th>Image2</th>
+                <th>Content1</th>
+                <th>Content2</th>
+                <th>Araçlar</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in Model)
+            {
+
+            <tr>
+                <td>@item.AboutID</td>
+                <td>@item.AboutImage1</td>
+                <td>@item.AboutImage2</td>
+                <td>@item.AboutContent1</td>
+                <td>@item.AboutContent2</td>
+                <td><a class="btn btn-info" href="/About/UpdateAbout/@item.AboutID">Güncelle</a></td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
+

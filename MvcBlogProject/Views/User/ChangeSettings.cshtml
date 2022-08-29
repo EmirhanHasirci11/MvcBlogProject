@@ -1,0 +1,130 @@
+﻿@model EntityLayer.Concrete.Author
+@{
+    ViewBag.Title = "ChangeSettings";
+    Layout = "~/Views/Shared/_Author_Layout_.cshtml";
+}
+
+
+
+
+@using (Html.BeginForm("ChangeSettings", "User", FormMethod.Post))
+{
+
+    <div class="form-group row">
+
+        <label class="col-sm-2 col-form-label">İsim *</label>
+        @Html.HiddenFor(x => x.AuthorID)
+        <div class="col-sm-10">
+
+            @Html.TextBoxFor(x => x.AuthorName, new { @class = "form-control", @placeholder = "Adınız." })
+            @Html.ValidationMessageFor(x => x.AuthorName)
+
+        </div>
+
+    </div>
+    <div class="form-group row">
+
+        <label class="col-sm-2 col-form-label">Soyisim *</label>
+
+        <div class="col-sm-10">
+
+
+            @Html.TextBoxFor(x => x.AuthorSurname, new { @class = "form-control", @placeholder = "Soyadınız." })
+            @Html.ValidationMessageFor(x => x.AuthorSurname)
+        </div>
+
+    </div>
+    <div class="form-group row">
+
+        <label class="col-sm-2 col-form-label">Unvan *</label>
+
+        <div class="col-sm-10">
+
+            @Html.TextBoxFor(x => x.AuthorTitle, new { @class = "form-control", @placeholder = "Unvan" })
+            @Html.ValidationMessageFor(x => x.AuthorTitle)
+        </div>
+
+    </div>
+    <div class="form-group row">
+
+        <label class="col-sm-2  col-form-label">Resim Yolu </label>
+
+        <div class="col-sm-10">
+            @Html.TextBoxFor(x => x.AuthorImage, new { @class = "form-control", @placeholder = "Resim bağlantı adresi" })
+            @Html.ValidationMessageFor(x => x.AuthorImage)
+        </div>
+
+    </div>
+
+    <div class="form-group row">
+
+        <label for="inputEmail" class="col-sm-2 col-form-label">Mail Adresi değiştirilemez!</label>
+
+        <div class="col-sm-10">
+
+            
+            @Html.TextBoxFor(x => x.AuthorMail, new { @class = "form-control", @placeholder = "Mailiniz", @readonly = "readonly" })
+            @Html.ValidationMessageFor(x => x.AuthorMail)
+        </div>
+
+    </div>
+
+    <div class="form-group row">
+
+        <label class="col-sm-2 col-form-label">Şifre *</label>
+
+        <div class="col-sm-10">
+            @Html.TextBoxFor(x => x.AuthorPassword, new { @class = "form-control", @placeholder = "Şifreniz." })
+            @Html.ValidationMessageFor(x => x.AuthorPassword)
+        </div>
+
+    </div>
+    <div class="form-group row">
+
+        <label class="col-sm-2 col-form-label">Hakkınızda *</label>
+
+        <div class="col-sm-10">
+
+            @Html.TextAreaFor(x => x.AuthorAbout, 4, 50, new { @class = "form-control", @placeholder = "Hakkınızda ana kısım" })
+            @Html.ValidationMessageFor(x => x.AuthorAbout)
+        </div>
+
+    </div>
+
+
+
+    <div class="form-group row">
+
+        <label for="inputSkills" class="col-sm-2 col-form-label">Hakkınızda Kısa *</label>
+
+        <div class="col-sm-10">
+            @Html.TextAreaFor(x => x.AuthorAboutShort, 2, 50, new { @class = "form-control", @placeholder = "Hakkınızda kısaca nelerle uğraştığınızı yazınız" })
+            @Html.ValidationMessageFor(x => x.AuthorAboutShort)
+
+        </div>
+
+    </div>
+
+    <div class="form-group row">
+
+        <div class="offset-sm-2 col-sm-10">
+
+
+
+        </div>
+
+    </div>
+
+    <div class="form-group row">
+
+        <div class="offset-sm-2 col-sm-10">
+            <h6>* İşareti ile belirtilen kısımlar zorunludur</h6>
+            <button type="submit" class="btn btn-danger">Kaydet</button>
+
+        </div>
+
+    </div>
+
+}
+
+

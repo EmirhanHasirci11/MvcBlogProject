@@ -16,11 +16,30 @@ namespace BusinessLayer.Concrete
         public BlogManager(IBlogDal blogDal)
         {
             _blogDal = blogDal;
-        }       
+        }
+
+        public void AdminBlogStatus(Blog p)
+        {
+            if (p.BlogStatus == false)
+            {
+                p.BlogStatus = true;
+            }
+            else
+            {
+                p.BlogStatus = false;
+            }
+            _blogDal.Update(p);
+        }
+
+        public void BlogDeleteAuthor(Blog blog)
+        {
+            blog.BlogStatus = false;
+            _blogDal.Update(blog);
+        }
 
         public List<Blog> GetBlogsByAuthor(int authorID)
         {
-            return _blogDal.List(x=>x.AuthorID==authorID);
+            return _blogDal.List(x=>x.AuthorID==authorID&&x.BlogStatus==true);
         }
 
         public List<Blog> GetBlogsByCategory(int categoryID)
@@ -50,6 +69,7 @@ namespace BusinessLayer.Concrete
 
         public void TDelete(Blog t)
         {
+        
             _blogDal.Delete(t);
         }
 

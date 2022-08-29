@@ -30,17 +30,27 @@ namespace BusinessLayer.Concrete
 
         public void TAdd(Category t)
         {
+            t.CategoryStatus = true;
             _categoryDal.Insert(t);
 
         }
 
         public void TDelete(Category t)
         {
-            _categoryDal.Delete(t);
+            if (t.CategoryStatus == true)
+            {
+                t.CategoryStatus = false;
+            }
+            else
+            {
+                t.CategoryStatus = true;
+            }
+            _categoryDal.Update(t);          
         }
 
         public void TUpdate(Category t)
         {
+            t.CategoryStatus = true;
             _categoryDal.Update(t);
         }
     }

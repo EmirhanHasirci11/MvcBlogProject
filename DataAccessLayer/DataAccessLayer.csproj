@@ -102,6 +102,38 @@
     <Compile Include="Migrations\202208212149377__Category_Status_Added_.designer.cs">
       <DependentUpon>202208212149377__Category_Status_Added_.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202208221206508__Contact_MessageDate_Added_.cs" />
+    <Compile Include="Migrations\202208221206508__Contact_MessageDate_Added_.designer.cs">
+      <DependentUpon>202208221206508__Contact_MessageDate_Added_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208221606541__Blog_BlogRating_Added_.cs" />
+    <Compile Include="Migrations\202208221606541__Blog_BlogRating_Added_.designer.cs">
+      <DependentUpon>202208221606541__Blog_BlogRating_Added_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208221939010__Author_AuthorMail_IsUnique_Updated_.cs" />
+    <Compile Include="Migrations\202208221939010__Author_AuthorMail_IsUnique_Updated_.designer.cs">
+      <DependentUpon>202208221939010__Author_AuthorMail_IsUnique_Updated_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208250151454__Admin_Role_Added_.cs" />
+    <Compile Include="Migrations\202208250151454__Admin_Role_Added_.designer.cs">
+      <DependentUpon>202208250151454__Admin_Role_Added_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208251206303__Blog_Status_Added_.cs" />
+    <Compile Include="Migrations\202208251206303__Blog_Status_Added_.designer.cs">
+      <DependentUpon>202208251206303__Blog_Status_Added_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208251311495__Blog_Rating_Removed_.cs" />
+    <Compile Include="Migrations\202208251311495__Blog_Rating_Removed_.designer.cs">
+      <DependentUpon>202208251311495__Blog_Rating_Removed_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208251620445__About_Annotation_Removed_forFluentValidation_.cs" />
+    <Compile Include="Migrations\202208251620445__About_Annotation_Removed_forFluentValidation_.designer.cs">
+      <DependentUpon>202208251620445__About_Annotation_Removed_forFluentValidation_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208251704047__All_Annotations_Removed_forFluentValidation_.cs" />
+    <Compile Include="Migrations\202208251704047__All_Annotations_Removed_forFluentValidation_.designer.cs">
+      <DependentUpon>202208251704047__All_Annotations_Removed_forFluentValidation_.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -139,6 +171,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202208212149377__Category_Status_Added_.resx">
       <DependentUpon>202208212149377__Category_Status_Added_.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208221206508__Contact_MessageDate_Added_.resx">
+      <DependentUpon>202208221206508__Contact_MessageDate_Added_.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208221606541__Blog_BlogRating_Added_.resx">
+      <DependentUpon>202208221606541__Blog_BlogRating_Added_.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208221939010__Author_AuthorMail_IsUnique_Updated_.resx">
+      <DependentUpon>202208221939010__Author_AuthorMail_IsUnique_Updated_.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208250151454__Admin_Role_Added_.resx">
+      <DependentUpon>202208250151454__Admin_Role_Added_.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208251206303__Blog_Status_Added_.resx">
+      <DependentUpon>202208251206303__Blog_Status_Added_.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208251311495__Blog_Rating_Removed_.resx">
+      <DependentUpon>202208251311495__Blog_Rating_Removed_.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208251620445__About_Annotation_Removed_forFluentValidation_.resx">
+      <DependentUpon>202208251620445__About_Annotation_Removed_forFluentValidation_.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208251704047__All_Annotations_Removed_forFluentValidation_.resx">
+      <DependentUpon>202208251704047__All_Annotations_Removed_forFluentValidation_.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

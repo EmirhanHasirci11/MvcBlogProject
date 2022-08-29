@@ -9,6 +9,8 @@ namespace BusinessLayer.Abstract
 {
     public interface IAuthorService : IGenericService<Author>
     {
+        List<Author> AuthorListExceptById(int id);
         
+        void UpdateMailChange(Author p);
     }
 }

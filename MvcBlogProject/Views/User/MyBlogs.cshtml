@@ -1,0 +1,77 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Blog>
+
+
+<div class="active tab-pane" id="activity">
+
+    <!-- Post -->
+    @foreach (var item in Model)
+    {
+
+        <div class="post">
+
+            <div class="user-block">
+
+                <img class=" img-bordered-lg" src=" @item.BlogImage" alt="Blog image">
+
+                <span class="username">
+
+                    <a href="#">@item.BlogTitle</a>
+
+                    
+
+                </span>
+
+                <span class="description">@(((DateTime)item.BlogDate).ToString("dd-MMM-yyyy"))</span>
+
+            </div>
+
+            <!-- /.user-block -->
+
+            @if (item.BlogContent.Length < 300)
+            {
+                <p>
+                    @item.BlogContent
+                </p>
+            }
+            else
+            {
+                <p>                  
+                    @item.BlogContent.Substring(0, item.BlogContent.Substring(0, 300).LastIndexOf(" "))
+                </p>
+            }
+
+
+            <p>
+
+                <a href="/AuthorBlog/UpdateBlog/@item.BlogID" class="link-black text-sm mr-2"><i class="fas fa-edit mr-1"></i>Güncelle</a>
+
+                <a href="#" class="link-black text-sm"><i class="far fa-trash-alt mr-1"></i> Kaldır</a>
+
+                <span class="float-right">
+
+                    <a href="#" class="link-black text-sm">
+
+                        <i class="far fa-comments mr-1"></i>Yorumlar
+
+                    </a>
+
+                </span>
+
+            </p>
+
+            
+
+        </div>
+    }
+
+    <!-- /.post -->
+    <!-- Post -->
+    <!-- /.post -->
+    <!-- Post -->
+    <!-- /.post -->
+
+</div>
+
+<!-- /.tab-pane -->
+<!-- /.tab-pane -->
+<!-- /.tab-pane -->

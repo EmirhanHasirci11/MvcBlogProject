@@ -6,24 +6,12 @@
         {
             <li class="comment">
                 <div class="vcard">
-                    @if (item.AuthorID == null)
-                    {
-                        <img src="~/Images/user.png" alt="Image placeholder">
-                    }
-                    else
-                    {
+                   
                     <img src="@item.Author.AuthorImage" alt="Image placeholder">
-                    }
+                    
                 </div>
-                <div class="comment-body">
-                    @if (item.AuthorID == null)
-                    {
-                        <h3>@item.CommentMail</h3>
-                    }
-                    else
-                    {
-                        <h3>@item.Author.AuthorName @item.Author.AuthorSurname</h3>
-                    }
+                <div class="comment-body">                                                         
+                       <h3>@item.Author.AuthorName @item.Author.AuthorSurname</h3>
                     <div class="meta">@(((DateTime)item.CommentDate).ToString("dd-MMM-yyyy"))</div>
                     <p>@item.CommentText</p>
                 </div>

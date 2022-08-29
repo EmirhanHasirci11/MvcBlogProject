@@ -93,3 +93,9 @@ C:\Users\emir_\source\repos\MvcBlogProject\MvcBlogProject\bin\PagedList.dll
 C:\Users\emir_\source\repos\MvcBlogProject\MvcBlogProject\bin\PagedList.Mvc.dll
 C:\Users\emir_\source\repos\MvcBlogProject\MvcBlogProject\bin\PagedList.xml
 C:\Users\emir_\source\repos\MvcBlogProject\MvcBlogProject\bin\PagedList.Mvc.xml
+C:\Users\emir_\source\repos\MvcBlogProject\MvcBlogProject\bin\FluentValidation.dll
+C:\Users\emir_\source\repos\MvcBlogProject\MvcBlogProject\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\emir_\source\repos\MvcBlogProject\MvcBlogProject\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\emir_\source\repos\MvcBlogProject\MvcBlogProject\bin\FluentValidation.xml
+C:\Users\emir_\source\repos\MvcBlogProject\MvcBlogProject\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\emir_\source\repos\MvcBlogProject\MvcBlogProject\bin\System.Threading.Tasks.Extensions.xml

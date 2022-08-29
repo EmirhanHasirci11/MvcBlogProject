@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "GetCommentStatusFalse";
+    Layout = "~/Views/Shared/_Author_Layout_.cshtml";
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Aktif Yorumlarım</title>
+</head>
+<body>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+
+                <th>#</th>
+                <th>Blog Başlığı</th>
+                <th>Yorum</th>
+                <th>Yorum Tarihi</th>
+                <th>Yorum Durumu</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+
+                <tr>
+
+                    <td>@item.CommentID</td>
+                    <td>@item.Blog.BlogTitle</td>
+                    <td>@item.CommentText</td>
+                    <td>@(((DateTime)item.CommentDate).ToString("dd-MMM-yyyy"))</td>
+                    <td><span class="badge badge-danger">Silinmiş</span></td>
+                   
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
+

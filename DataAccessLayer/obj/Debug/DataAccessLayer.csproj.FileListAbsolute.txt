@@ -22,3 +22,11 @@ C:\Users\emir_\source\repos\MvcBlogProject\DataAccessLayer\obj\Debug\DataAccessL
 C:\Users\emir_\source\repos\MvcBlogProject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations._Author_Title_and_AboutShort_Added_.resources
 C:\Users\emir_\source\repos\MvcBlogProject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations._Comment_CommentStatus_Added_.resources
 C:\Users\emir_\source\repos\MvcBlogProject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations._Category_Status_Added_.resources
+C:\Users\emir_\source\repos\MvcBlogProject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations._Contact_MessageDate_Added_.resources
+C:\Users\emir_\source\repos\MvcBlogProject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations._Blog_BlogRating_Added_.resources
+C:\Users\emir_\source\repos\MvcBlogProject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations._Author_AuthorMail_IsUnique_Updated_.resources
+C:\Users\emir_\source\repos\MvcBlogProject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations._Admin_Role_Added_.resources
+C:\Users\emir_\source\repos\MvcBlogProject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations._Blog_Status_Added_.resources
+C:\Users\emir_\source\repos\MvcBlogProject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations._Blog_Rating_Removed_.resources
+C:\Users\emir_\source\repos\MvcBlogProject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations._About_Annotation_Removed_forFluentValidation_.resources
+C:\Users\emir_\source\repos\MvcBlogProject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations._All_Annotations_Removed_forFluentValidation_.resources

@@ -10,9 +10,10 @@
             <th style="width:1%;">#</th>
             <th>Ad</th>
             <th style="width:4%;">Renk</th>
+            <th>Durum</th>
             <th>Açıklama</th>
             <th style="text-align:center; width:20%;" colspan="3">Araçlar</th>
-            
+
         </tr>
     </thead>
     <tbody>
@@ -22,15 +23,36 @@
                 <td>@item.CategoryID</td>
                 <td>@item.CategoryName</td>
                 <td><span class="badge" style="color:white;background-color:@item.CategoryColor">Kategori</span></td>
+                <td> @Html.Raw(item.CategoryStatus == true ? "<span class='badge badge-success'>Aktif</span>" : "<span class='badge badge-danger'>Pasif</span>")</td>
                 <td>@item.CategoryDescription</td>
-                <td><a href="/Category/DeleteCategory/@item.CategoryID" class="btn btn-danger ">Sil</a></td>
-                <td><a href="/Category/EditCategory/@item.CategoryID" class="btn btn-info ">Guncelle</a></td>
-                <td><a href="#" class="btn btn-primary ">Bloglar</a></td>
+                @switch (item.CategoryStatus)
+                {
+                    case true:
+                        <td>
+                            <a id="DeleteBtnPasif" onclick="return confirm('Kategoriyi pasif hale getirmek istediğinize emin misiniz ?');" class="btn btn-danger btn-sm" href="/Category/DeleteCategory/@item.CategoryID">
+                                <i class="fas fa-trash">
+                                </i>
+                                Pasif Yap
+                            </a>
+                        </td>
+                        break;
+                    case false:
+                        <td>
+                            <a id="DeleteBtnActive" onclick="return confirm('Kategoriyi pasif hale getirmek istediğinize emin misiniz ?');"  class="btn btn-success btn-sm" href="/Category/DeleteCategory/@item.CategoryID">
+                                <i class="fas fa-check">
+                                </i>
+                                Aktif Yap
+                            </a>
+                        </td>
+                        break;
+                }
+                <td><a href="/Category/UpdateCategory/@item.CategoryID" class="btn btn-info ">Guncelle</a></td>
+                <td><a href="/Blog/BlogByCategory/@item.CategoryID" class="btn btn-primary ">Bloglar</a></td>
             </tr>
         }
     </tbody>
 </table>
 <br />
-<a href="/AdminCategory/AddCategory" class="btn btn-success">Kategori ekle</a>
+@Html.Action("AddCategoryPartial", "Category")
 
 

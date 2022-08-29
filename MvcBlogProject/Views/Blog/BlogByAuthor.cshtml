@@ -1,0 +1,103 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Blog>
+@{
+    ViewBag.Title = "BlogByAuthor";
+    Layout = "~/Views/Shared/_BlogLayout.cshtml";
+}
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>AdminLTE 3 | Projects</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="~/Templates/AdminLTE-3.0.4/plugins/fontawesome-free/css/all.min.css">
+<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+<link rel="stylesheet" href="~/Templates/AdminLTE-3.0.4/dist/css/adminlte.min.css">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+
+
+
+
+<body class="hold-transition sidebar-mini">
+    <section class="content">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Projects</h3>
+
+            </div>
+            <div class="card-body p-0">
+                <table class="table table-striped projects">
+                    <thead>
+                        <tr>
+                            <th >
+                                Blog Başlığı
+                            </th>
+                            <th >
+                                Yazar
+                            </th>
+                            <th >
+                                Blog Kategorisi
+                            </th>
+                            <th >
+                               Araçlar
+                            </th>
+                           
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+
+                            <tr>
+                                <td>
+                                    <a>
+                                        @item.BlogTitle
+                                    </a>
+                                    <br />
+                                </td>
+                                <td>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <img alt="Avatar" class="table-avatar" src="@item.Author.AuthorImage">
+                                            <b>@item.Author.AuthorName @item.Author.AuthorSurname</b>
+                                        </li>
+                                    </ul>
+                                </td>
+
+                                <td >
+                                    <span class="badge" style="background-color:@item.Category.CategoryColor;color:white; min-width:75px;">@item.Category.CategoryName</span>
+                                </td>                               
+                                <td >
+                                    <a class="btn btn-primary btn-sm" href="/Blog/BlogDetails/@item.BlogID">
+                                        <i class="fas fa-folder">
+                                        </i>
+                                        Bloğa Git
+                                    </a>
+                                </td>                                
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+
+
+<script src="~/Templates/AdminLTE-3.0.4/plugins/jquery/jquery.min.js"></script>
+
+<!-- Bootstrap 4 -->
+
+<script src="~/Templates/AdminLTE-3.0.4/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- AdminLTE App -->
+
+<script src="~/Templates/AdminLTE-3.0.4/dist/js/adminlte.min.js"></script>
+
+<!-- AdminLTE for demo purposes -->
+
+<script src="~/Templates/AdminLTE-3.0.4/dist/js/demo.js"></script>
+
+@Html.Action("AddMail", "MailSubscribe")
+@Html.Action("Footer", "About")
+

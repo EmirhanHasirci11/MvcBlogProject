@@ -1,0 +1,34 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Category>
+@{
+    ViewBag.Title = "BlogCategoryList";
+    Layout = "~/Views/Shared/_BlogLayout.cshtml";
+}
+
+<div class="container">
+    <div style="text-align:center;">
+        <h1>Tüm Kategoriler</h1>
+        <h3>Aradığınız blog türleri için aşağıdaki tablodan bir kategori seçmeniz yeterli</h3>
+    </div>
+    <table class="table table-bordered">
+        <thead>
+            <tr style="text-align:center">
+                <th style="width:20%;">Kategoriler</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr style="text-align:center">
+                    <td style="background-color:@item.CategoryColor; color:white; text-align:center;min-width:75px; font-size:20px;" class="badge"><a style="color:white;" href="/Blog/BlogByCategory/@item.CategoryID">@item.CategoryName</a></td>
+
+                </tr>
+
+            }
+        </tbody>
+    </table>
+</div>
+
+@Html.Action("AddMail", "MailSubscribe")
+@Html.Action("Footer", "About")

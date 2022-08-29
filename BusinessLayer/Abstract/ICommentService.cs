@@ -11,6 +11,11 @@ namespace BusinessLayer.Abstract
     {
         List<Comment> GetCommentByBlog(int id);
         bool CommentSenderIsAuthor(int id);
+        void TAdd(Comment c,int blogID,int authorID,string mail);
         List<Comment> GetCommentListStatus(bool status);
+        List<Comment> GetCommentListByAuthorID(int id);
+        List<Comment> GetCommentListAuthorStatus(int authorId, bool status);
+
+
     }
 }

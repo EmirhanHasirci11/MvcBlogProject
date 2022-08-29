@@ -1,0 +1,89 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Comment>
+<div class="tab-pane" id="timeline">
+
+    <!-- The timeline -->
+
+    <div class="timeline timeline-inverse">
+
+        @foreach (var item in Model)
+        {
+
+
+            <div class="time-label">
+
+                <span class="bg-danger">
+
+                    @item.Blog.BlogTitle
+
+                </span>
+
+            </div>
+
+            <!-- /.timeline-label -->
+            <!-- timeline item -->
+
+            <div>
+                
+
+                    
+                
+                    
+
+               
+
+
+                <div class="timeline-item">
+
+                    <span class="time"><i class="far fa-clock"></i> @(((DateTime)item.CommentDate).ToString("dd-MMM-yyyy"))</span>
+                    
+                    
+                        <h3 class="timeline-header"><a href="#">@item.Author.AuthorName @item.Author.AuthorSurname</a> Mail: @item.Author.AuthorMail</h3>
+
+                    
+
+                    <div class="timeline-body">
+
+                        @item.CommentText
+
+                    </div>
+
+                    <div class="timeline-footer">
+
+                        <a href="/Blog/BlogDetails/@item.BlogID" class="btn btn-primary btn-sm">Blogda Göster</a>
+
+                        <a href="#" class="btn btn-danger btn-sm">Sil</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- END timeline item -->
+            <!-- timeline item -->
+
+
+
+            <!-- END timeline item -->
+            <!-- timeline item -->
+
+
+
+            <!-- END timeline item -->
+            <!-- timeline time label -->
+
+
+
+            <!-- /.timeline-label -->
+            <!-- timeline item -->
+
+
+
+            <!-- END timeline item -->
+
+            
+
+        }
+    </div>
+
+</div>

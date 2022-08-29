@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_BlogLayout.cshtml";
 }
 
-<h2>BlogDetails @ViewBag.getid</h2>
+
 @Html.Action("BlogCover", "Blog")
 <section class="site-section py-lg">
     <div class="container">
@@ -26,7 +26,7 @@
         </div>
     </div>
 </section>
-@Html.Action("OtherFeaturedPost", "Blog")
+
 @Html.Action("AddMail", "MailSubscribe")
 @Html.Action("Footer", "About")
 

@@ -1,0 +1,38 @@
+﻿@model EntityLayer.Concrete.Admin
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <title>Admin adding Page</title>
+</head>
+<body style="background-color:lightseagreen">
+    <div class="container" style="text-align:center;">
+        <h1>Admin Ekleme Paneli</h1>
+        @using (Html.BeginForm("AddAdmin", "Admin", FormMethod.Post))
+        {
+
+    <div class="form-group">
+        @Html.Label("Admin UserName")
+        @Html.TextBoxFor(x => x.UserName, "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.UserName)
+        <br />
+        @Html.Label("Admin Password")
+        @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Password);
+        <br />
+        @Html.Label("Admin Role")
+        @Html.TextBoxFor(x => x.Role, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Role);
+        <br />
+        <button class="btn btn-outline-info" type="submit">Admin Ekle</button>
+    </div>
+        }
+    </div>
+</body>
+</html>

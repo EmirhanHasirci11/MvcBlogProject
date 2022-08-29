@@ -40,9 +40,20 @@ namespace BusinessLayer.Concrete
             return _commentDal.List(x => x.BlogID == id);
         }
 
+       
+
+        public List<Comment> GetCommentListByAuthorID(int id)
+        {
+            return _commentDal.List(x => x.AuthorID == id);
+        }
+
         public List<Comment> GetCommentListStatus(bool status)
         {
             return _commentDal.List(x => x.CommentStatus == status);
+        }
+        public List<Comment> GetCommentListAuthorStatus(int authorId,bool status)
+        {
+            return _commentDal.List(x => x.CommentStatus == status &&x.AuthorID==authorId);
         }
 
         public List<Comment> GetList()
@@ -72,6 +83,15 @@ namespace BusinessLayer.Concrete
         public void TUpdate(Comment t)
         {
             _commentDal.Update(t);
+        }
+
+        public void TAdd(Comment c, int blogID, int authorID, string mail)
+        {
+            c.BlogID = blogID;
+            c.AuthorID = authorID;
+            c.CommentMail = mail;
+            c.CommentDate = DateTime.Parse(DateTime.Now.ToShortDateString());
+            _commentDal.Insert(c);
         }
     }
 }

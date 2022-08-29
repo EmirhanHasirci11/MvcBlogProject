@@ -1,0 +1,54 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Blog>
+@{
+    ViewBag.Title = "MyBlogs";
+    Layout = "~/Views/Shared/_Author_Layout_.cshtml";
+}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>BlogPage</title>
+</head>
+<body>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Başlık</th>
+                <th>Kategori</th>
+                <th>Tarih</th>                
+                <th>Durum</th>
+                <th>Sil</th>
+                <th>Güncelle</th>
+                <th>Detaylar</th>
+                <th>Yorumlar</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>@item.BlogID</td>
+                <td>@item.BlogTitle</td>
+                <td><span class="badge " style="background-color:@item.Category.CategoryColor;color:white;min-width:75px; text-size-adjust:auto;"> @item.Category.CategoryName</span></td>
+                <td>@(((DateTime)item.BlogDate).ToString("dd-MMM-yyyy"))</td>               
+                <td> @Html.Raw(item.BlogStatus == true ? "<span class='badge badge-success'>Aktif</span>" : "<span class='badge badge-danger'>Pasif</span>")</td>
+                <td>
+                    <a id="DeleteBtnActive" onclick="return confirm('Blog yazısını silmek istediğinize emin misiniz ?');" class="btn btn-danger btn-sm" href="/AuthorBlog/DeleteBlog/@item.BlogID">
+                        <i class="fas fa-check">
+                        </i>
+                        Sil
+                    </a>
+                </td>
+                <td><a href="/AuthorBlog/UpdateBlog/@item.BlogID" class="btn btn-success">Güncelle</a> </td>
+                <td><a href="/Blog/BlogDetails/@item.BlogID" class="btn btn-primary">Detaylar</a> </td>
+                <td><a href="/AuthorComment/BlogComments/@item.BlogID" class="btn btn-dark">Yorumlar</a> </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+    <a href="/Blog/AddBlog" class="btn btn-primary">Blog Ekle</a>
+</body>
+</html>
+

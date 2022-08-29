@@ -1,11 +1,11 @@
 ﻿@model EntityLayer.Concrete.Blog
 <div class="sidebar-box">
     <div class="bio text-center">
-        <img src="@Html.DisplayFor(x=>x.Author.AuthorImage)" alt="Image Placeholder" class="img-fluid mb-5">
+        <a href="/Author/AuthorProfile/@Model.AuthorID"><img src="@Html.DisplayFor(x=>x.Author.AuthorImage)" alt="Image Placeholder" class="img-fluid mb-5"></a>
         <div class="bio-body">
-            <h2>@Html.DisplayFor(x=>x.Author.AuthorName) @Html.DisplayFor(x=>x.Author.AuthorSurname) </h2>
-            <p class="mb-4">@Html.DisplayFor(x=>x.Author.AuthorAbout)</p>
-            <p><a href="#" class="btn btn-primary btn-sm rounded px-4 py-2">Diğer Yazılarım</a></p>            
+            <h2>@Html.DisplayFor(x => x.Author.AuthorName) @Html.DisplayFor(x => x.Author.AuthorSurname) </h2>
+            <p class="mb-4">@Html.DisplayFor(x => x.Author.AuthorAboutShort)</p>
+            <p><a href="/Blog/BlogByAuthor/@Model.AuthorID" class="btn btn-primary btn-sm rounded px-4 py-2">Diğer Yazılarım</a></p>
         </div>
     </div>
 </div>

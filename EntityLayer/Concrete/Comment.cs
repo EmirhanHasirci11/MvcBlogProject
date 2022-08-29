@@ -11,11 +11,9 @@ namespace EntityLayer.Concrete
     {
         [Key]
         public int CommentID { get; set; }
-        [Required]
-        [StringLength(300)]
+
         public string CommentText { get; set; }
-        [Required]
-        [StringLength(50)]
+  
         public string CommentMail { get; set; }
         public DateTime CommentDate { get; set; }
         public bool CommentStatus{ get; set; }

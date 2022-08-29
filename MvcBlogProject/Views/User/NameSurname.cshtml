@@ -1,0 +1,11 @@
+﻿@{ 
+    var author = (EntityLayer.Concrete.Author)TempData.Peek("Author");
+}
+<div class="user-panel mt-3 pb-3 mb-3 d-flex">
+    <div class="image">
+        <img src="@author.AuthorImage" class="img-circle elevation-2" alt="User Image">
+    </div>
+    <div class="info">
+        <a href="/User/Index" class="d-block"><b>@author.AuthorName @author.AuthorSurname</b></a>
+    </div>
+</div>

@@ -11,11 +11,11 @@ namespace EntityLayer.Concrete
     {
         [Key]
         public int AdminID { get; set; }
-        [Required]
-        [StringLength(20)]
+       
         public string UserName { get; set; }
-        [Required]
-        [StringLength(20)]
+       
+        public string Role { get; set; }
+        
         public string Password { get; set; }
     }
 }

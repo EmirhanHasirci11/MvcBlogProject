@@ -36,7 +36,7 @@
 
                             <span class="post-category" style="background-color:@mainpost.Category.CategoryColor">@mainpost.Category.CategoryName</span>
                         </div>
-                        <h2>@ViewBag.mainpostTitle</h2>
+                        <h2>@mainpost.BlogTitle</h2>
                         <span class="date">@(((DateTime)mainpost.BlogDate).ToString("dd-MMM-yyyy"))</span>
                     </div>
                 </a>

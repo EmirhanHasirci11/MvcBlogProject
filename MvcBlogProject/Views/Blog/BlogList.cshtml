@@ -15,12 +15,12 @@
                     <div class="entry2">
                         <a href="/Blog/BlogDetails/@item.BlogID"><img src="@item.BlogImage" style="height:250px; width:350px;" alt="Image" class="img-fluid rounded"></a>
                         <div class="excerpt">
-                            <span class="post-category text-white  mb-3" style="background-color:@item.Category.CategoryColor">@item.Category.CategoryName</span>
-
+                            
+                            <a href="/Blog/BlogByCategory/@item.CategoryID" class="post-category text-white  mb-3" style="background-color:@item.Category.CategoryColor;color:white;">@item.Category.CategoryName</a>
                             <h2><a href="/Blog/BlogDetails/@item.BlogID">@item.BlogTitle</a></h2>
                             <div class="post-meta align-items-center text-left clearfix">
-                                <figure class="author-figure mb-0 mr-3 float-left"><img src="@item.Author.AuthorImage" alt="Image" class="img-fluid"></figure>
-                                <span class="d-inline-block mt-1"><a href="#">@item.Author.AuthorName @item.Author.AuthorSurname</a> Tarafından yazılmıştır.</span>
+                                <figure class="author-figure mb-0 mr-3 float-left"><a href="/Author/AuthorProfile/@item.AuthorID"><img src="@item.Author.AuthorImage" alt="Image" class="img-fluid"></a></figure>
+                                <span class="d-inline-block mt-1"><a href="/Author/AuthorProfile/@item.AuthorID">@item.Author.AuthorName @item.Author.AuthorSurname</a> Tarafından yazılmıştır.</span>
                                 <span>&nbsp;-&nbsp; @(((DateTime)item.BlogDate).ToString("dd-MMM-yyyy"))</span>
                             </div>
                             @if (item.BlogContent.Length < 200)
@@ -32,7 +32,7 @@
 
                                 <p>@item.BlogContent.Substring(0, item.BlogContent.Substring(0, 200).LastIndexOf(" "))</p>
                             }
-                            <p><a href="/Blog/BlogDetails/@item.BlogID">Read More</a></p>
+                            <p><a href="/Blog/BlogDetails/@item.BlogID">Devamını oku</a></p>
                         </div>
                     </div>
                 </div>

@@ -12,37 +12,45 @@
 
     @using (Html.BeginForm("EditAuthor", "Author", FormMethod.Post))
     {
-        <div class="form-group">
-            @Html.HiddenFor(x=>x.AuthorID)
-            @Html.Label("Yazar Adı *")
-            @Html.TextBoxFor(x => x.AuthorName, new { @class = "form-control", @placeholder = "Adınız" })
-            <br />
-            @Html.Label("Yazar Soyadı *")
-            @Html.TextBoxFor(x => x.AuthorSurname, new { @class = "form-control", @placeholder = "Soyadınız" })
-            <br />
-            @Html.Label("Yazar Resim Yolu")
-            @Html.TextBoxFor(x => x.AuthorImage, new { @class = "form-control", @placeholder = "Lütfen bir resim sitesi kullanarak resminizi 128x128 boyutlarında paylaşıp linkinizi buraya ekleyiniz " })
-            <br />
-            @Html.Label("Yazar Panel Hakkında kısmı *")
-            @Html.TextAreaFor(x => x.AuthorAbout, 4, 40, new { @class = "form-control", @placeholder = "Hakkınızda bilinmesi istenilenleri giriniz" })
-            <br />
-            @Html.Label("Yazar Maili *")
-            @Html.TextBoxFor(x => x.AuthorMail, new { @class = "form-control", @placeholder = "Mailiniz" })
-            <br />
-            @Html.Label("Yazar Şifresi *")
-            @Html.TextBoxFor(x => x.AuthorPassword, new { @class = "form-control", @placeholder = "Şifreniz" })
-            <br />
-            @Html.Label("Yazar Unvanınız *")
-            @Html.TextBoxFor(x => x.AuthorTitle, new { @class = "form-control", @placeholder = "Unvanınızı giriniz" })
-            <br />
-            @Html.Label("Yazar kısa bilgi")
-            @Html.TextBoxFor(x => x.AuthorAboutShort, new { @class = "form-control", @placeholder = "Hakkınızda kısaca neler yaptığınızı '/' ile ayırarak giriniz" })
-            <br />
+    <div class="form-group">
+        @Html.HiddenFor(x => x.AuthorID)
+        @Html.Label("Yazar Adı *")
+        @Html.TextBoxFor(x => x.AuthorName, new { @class = "form-control", @placeholder = "Adınız" })
+        @Html.ValidationMessageFor(x => x.AuthorName)
+        <br />
+        @Html.Label("Yazar Soyadı *")
+        @Html.TextBoxFor(x => x.AuthorSurname, new { @class = "form-control", @placeholder = "Soyadınız" })
+        @Html.ValidationMessageFor(x => x.AuthorSurname)
+        <br />
+        @Html.Label("Yazar Resim Yolu")
+        @Html.TextBoxFor(x => x.AuthorImage, new { @class = "form-control", @placeholder = "Lütfen bir resim sitesi kullanarak resminizi 128x128 boyutlarında paylaşıp linkinizi buraya ekleyiniz " })
+        @Html.ValidationMessageFor(x => x.AuthorImage)               
+        <br />
+        @Html.Label("Yazar Maili değiştirilemez! ")
+        @Html.TextBoxFor(x => x.AuthorMail, new { @class = "form-control", @placeholder = "Mailiniz" })
+        @Html.ValidationMessageFor(x => x.AuthorMail)
+        <br />
+        @Html.Label("Yazar Şifresi *")
+        @Html.TextBoxFor(x => x.AuthorPassword, new { @class = "form-control", @placeholder = "Şifreniz" })
+        @Html.ValidationMessageFor(x => x.AuthorPassword)
+        <br />
+        @Html.Label("Yazar Unvanınız *")
+        @Html.TextBoxFor(x => x.AuthorTitle, new { @class = "form-control", @placeholder = "Unvanınızı giriniz" })
+        @Html.ValidationMessageFor(x => x.AuthorTitle)
+        <br />
+        @Html.Label("Yazar Panel Hakkında kısmı *")
+        @Html.TextAreaFor(x => x.AuthorAbout, 4, 40, new { @class = "form-control", @placeholder = "Hakkınızda bilinmesi istenilenleri giriniz" })
+        @Html.ValidationMessageFor(x => x.AuthorAbout)
+        <br />
+        @Html.Label("Yazar kısa bilgi")
+        @Html.TextBoxFor(x => x.AuthorAboutShort, new { @class = "form-control", @placeholder = "Hakkınızda kısaca neler yaptığınızı '/' ile ayırarak giriniz" })
+        @Html.ValidationMessageFor(x => x.AuthorAboutShort)
+        <br />
 
-            <h6>***Yıldız ile belirtilenler zorunludur.***</h6>
-            <br />
-            <button type="submit" class="btn btn-success">Güncelle</button>
-        </div>
+        <h6>***Yıldız ile belirtilenler zorunludur.***</h6>
+        <br />
+        <button type="submit" class="btn btn-success">Güncelle</button>
+    </div>
     }
 
 

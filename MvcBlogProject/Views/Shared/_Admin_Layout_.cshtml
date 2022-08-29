@@ -21,7 +21,7 @@
                      alt="AdminLTE Logo"
                      class="brand-image img-circle elevation-3"
                      style="opacity: .8">
-                <span class="brand-text font-weight-light">MVC Blog Projesi</span>
+                <span class="brand-text font-weight-light">Admin Paneli</span>
 
             </a>
             <div class="sidebar">
@@ -30,7 +30,7 @@
                         <img src="~/Templates/AdminLTE-3.0.4/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">Blog Admin Paneli</a>
+                        <a href="#" class="d-block">Admin</a>
                     </div>
                 </div>
                 <nav class="mt-2">
@@ -41,7 +41,7 @@
                                 <p>
                                     Bloglar
                                 </p>
-                            <i class="right fas fa-angle-left"></i>
+                                <i class="right fas fa-angle-left"></i>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
@@ -87,7 +87,7 @@
                                 <p>
                                     Yorumlar
                                 </p>
-                                <i class="right fas fa-angle-left" ></i>
+                                <i class="right fas fa-angle-left"></i>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
@@ -99,7 +99,7 @@
                                 <li class="nav-item">
                                     <a href="/Comment/AdminCommentListFalse" class="nav-link">
                                         <i class="far fa-window-close nav-icon"></i>
-                                        <p>Onaylanmamış Yorumlar</p>
+                                        <p>Kaldırılmış Yorumlar</p>
                                     </a>
                                 </li>
                             </ul>
@@ -113,7 +113,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="../widgets.html" class="nav-link">
+                            <a href="/About/UpdateAboutList" class="nav-link">
                                 <i class="nav-icon fas fa-user"></i>
                                 <p>
                                     Hakkımda
@@ -121,7 +121,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="../widgets.html" class="nav-link">
+                            <a href="/Contact/Inbox" class="nav-link">
                                 <i class="nav-icon fas fa-mail-bulk"></i>
                                 <p>
                                     Mesajlar
@@ -166,8 +166,16 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="../widgets.html" class="nav-link">
-                                <i class="nav-icon fas fa-window-close"></i>
+                            <a href="/Blog/Index" class="nav-link">
+                                <i class="nav-icon fas fa-backward"></i>
+                                <p>
+                                    Siteye Dön
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Login/Logout" class="nav-link">
+                                <i class="nav-icon fas fa-door-open"></i>
                                 <p>
                                     Çıkış Yap
                                 </p>
@@ -186,12 +194,8 @@
 
         
 
-        <div class="content-wrapper">
-
-            <!-- Content Header (Page header) -->
-
+        <div class="content-wrapper">            
             <section class="content-header">
-
                 <div class="container-fluid">
                             @RenderBody()
                 </div><!-- /.container-fluid -->

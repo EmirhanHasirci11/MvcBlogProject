@@ -18,6 +18,11 @@ namespace BusinessLayer.Concrete
             _adminDal = adminDal;
         }
 
+        public Admin GetAdminByName(string name)
+        {
+            return _adminDal.GetById(x => x.UserName == name);
+        }
+
         public Admin GetById(int id)
         {
             return _adminDal.GetById(x => x.AdminID == id);

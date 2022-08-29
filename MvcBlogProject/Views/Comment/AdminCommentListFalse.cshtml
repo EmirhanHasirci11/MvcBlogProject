@@ -35,8 +35,8 @@
                                 @item.CommentText
                             </p>
                             <span class="float-right">
-                                <a href="/Comment/ChangeStatusToTrue/@item.CommentID" class="link-black text-sm">
-                                    <i class="far fa-window-close mr-1"></i>Yorumu Onayla
+                                <a id="DeleteBtn" onclick="return confirm('Yorumu Aktifleştirmek istediğinize emin misiniz')" href="/Comment/ChangeStatusToTrue/@item.CommentID" class="link-black text-sm">
+                                    <i class="far fa-window-close mr-1"></i>Aktifleştir
                                 </a>
                             </span>
                             <br />
